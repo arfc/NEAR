@@ -9,3 +9,6 @@ Houses the Enrichment Versatile non-Equilibrium Reactor (EVER), a generic Cyclus
 
 ## ./CLOVER/ (in progress)
 Houses the Core LOading Versatile non-Equilibrium Reactor (CLOVER), a generic Cyclus archetype that has the capability to update the loading pattern of a reactor core.
+
+## ./writing/
+This folder contains the writing on this project, and is governed by the license therein.
