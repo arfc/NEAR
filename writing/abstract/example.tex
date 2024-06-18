@@ -20,10 +20,13 @@ $^{b}$Advanced Reactors and Fuel Cycles Group, University of Illinois Urbana-Cha
 \usepackage[acronym]{glossaries}
 \usepackage{enumitem}
 
-\setlist{topsep=1.5em, itemsep=0.02em}
+\setlist{topsep=1.5em, itemsep=0.002em}
 \newcommand{\cyclus}{\textsc{Cyclus}\xspace} %
 \newcommand{\cycamore}{\textsc{Cycamore}\xspace} %
 \newcommand{\cymetric}{\textsc{Cymetric}\xspace} %
+\newcommand{\ever}{\textsc{ever}\xspace} %
+\newcommand{\clover}{\textsc{CLOVER}\xspace} %
+\newcommand{\near}{\textsc{NEAR}\xspace} %
 \newcommand{\SN}{S$_N$}
 \renewcommand{\vec}[1]{\bm{#1}} %vector is bold italic
 \newcommand{\vd}{\bm{\cdot}} % slightly bold vector dot
@@ -37,12 +40,12 @@ $^{b}$Advanced Reactors and Fuel Cycles Group, University of Illinois Urbana-Cha
 \include{acros}
 \section{Introduction}
 
-In this work we will build alongside the work of Amanda Bachmann on OpenMCyclus \textbf{cite OpenMCyclus} to create greater flexibility in the \cyclus ecosystem for versatile simulation of non-equilibrium reactors. Instead of modeling a specific reactor, in this work we will create versatile archetypes that can be used to approximate specific designs. We will be comparing the gain in fidelity to the existing \cycamore reactor archetype in a series of baseline scenarios. Our two primary thrusts of this work are to enhance fidelity in depletion and fuel loading.
+In this work we will build alongside the work of Amanda Bachmann on OpenMCyclus \cite{bachmann_thesis_2023} to create greater flexibility in the \cyclus \cite{cyclus_intro} ecosystem for versatile simulation of non-equilibrium core reactors. We will create versatile archetypes that can be used to approximate specific designs instead of modeling a specific reactor. We will be comparing the gain in fidelity to the existing \cycamore reactor archetype in a series of baseline scenarios. Our two primary thrusts of this work are to enhance fidelity in depletion and fuel loading.
+
+% say what fuel cycle factors you are studying and why to do this
 
 
-
-
-If we translate these fuel cycle factors into real life scenarios, exogenous factors such as human behavior, regulation, and economic constraint can drive models to differing conclusions.
+When we translate these fuel cycle factors into real life scenarios, exogenous factors such as human behavior, regulation, and economic constraint can drive models to differing conclusions; therefore, we can increase the relevence of our models by incorporating modular and versatile archetypes.
 
 \subsection{The \cyclus Ecosystem}
 In this work, we will distinguish between the code \cyclus, and the collection of software \cyclus by labeling the latter the \cyclus ecosystem. The \cyclus ecosystem is comprised of a core set of codes: \cyclus, \cycamore, and \cymetric, developer maintained codes, and user-maintained codes.
@@ -63,15 +66,19 @@ them separately to allow future users a simplified interface if they do not
 want all of NEAR's functionality. As such, we will present the theory behind
 EVER and CLOVER, but our results will include NEAR.
 
+
 \section{Theory}
 
 
-
-\cite{Car1953}
+NEAR contains the functionality of both EVER and CLOVER, but we will deploy
+them separately to allow future users a simplified interface if they do not
+want all of NEAR's functionality. As such, we will present the theory behind
+EVER and CLOVER, but our results will include NEAR.
 
 
 \section{Preliminary Results}
 
+Users of the \cycamore reactor archetype have the ability to change the inputs and outputs at various times in the simultaion. A user could use this capability to alter the fuel recipe to reflect the changing isotopics of a reacotr core, or the impact of different core configurations. We implemented these features in \gls{ever} and \gls{clover} to be explitict to compare with \cycamore
 
 
 \subsection{Existing Enrichment Fidelity}
