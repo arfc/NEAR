@@ -17,60 +17,94 @@ $^{b}$Advanced Reactors and Fuel Cycles Group, University of Illinois Urbana-Cha
 \usepackage{booktabs} % nice rules (thick lines) for tables
 \usepackage{microtype} % improves typography for PDF
 \usepackage{xspace}
-\newcommand{\Cyclus}{\textsc{Cyclus}\xspace} %
-\newcommand{\Cycamore}{\textsc{Cycamore}\xspace} %
-\newcommand{\Cymetric}{\textsc{Cymetric}\xspace} %
+\usepackage[acronym]{glossaries}
+\usepackage{enumitem}
+
+\setlist{topsep=1.5em, itemsep=0.02em}
+\newcommand{\cyclus}{\textsc{Cyclus}\xspace} %
+\newcommand{\cycamore}{\textsc{Cycamore}\xspace} %
+\newcommand{\cymetric}{\textsc{Cymetric}\xspace} %
 \newcommand{\SN}{S$_N$}
 \renewcommand{\vec}[1]{\bm{#1}} %vector is bold italic
 \newcommand{\vd}{\bm{\cdot}} % slightly bold vector dot
 \newcommand{\grad}{\vec{\nabla}} % gradient
 \newcommand{\ud}{\mathop{}\!\mathrm{d}} % upright derivative symbol
 
+\makeglossaries
+
+
 \begin{document}
+\include{acros}
 \section{Introduction}
 
+In this work we will build alongside the work of Amanda Bachmann on OpenMCyclus \textbf{cite OpenMCyclus} to create greater flexibility in the \cyclus ecosystem for versatile simulation of non-equilibrium reactors. Instead of modeling a specific reactor, in this work we will create versatile archetypes that can be used to approximate specific designs. We will be comparing the gain in fidelity to the existing \cycamore reactor archetype in a series of baseline scenarios. Our two primary thrusts of this work are to enhance fidelity in depletion and fuel loading.
 
-\subsection{The \Cyclus Ecosystem}
-In this work, we will distinguish between the code \Cyclus, and the collection of software \Cyclus by labeling the latter the \Cyclus ecosystem. The \Cyclus ecosystem is comprised of a core set of codes: \Cyclus, \Cycamore, and \Cymetric, developer maintained codes, and user-maintained codes.
 
-The code \Cyclus houses the base engine and several fundamental facility types, such as preditor and prey facilities. \Cycamore adds in a series of modular nuclear fuel cycle facilities that users can deploy to create all manner of fuel cycles, while \Cymetric contains code allowing users to analyze their \Cyclus runs. Together these three tools comprise the modular core of the \Cyclus ecosystem; outside this core are codes maintained by the \Cyclus developers and third party codes, which give users additional functionality to create high fidelity fuel cycle simulations.
 
-Many of the codes outside the core are third party archetypal facilities, and, as an agent-based code, \Cyclus users can incorporate them in a plug-and-play fashion. When developers find an area of the fuel cycle not covered by the \Cycamore archetypes, they can build their own to increase fidelity or expand their modeling capabilities.
 
+If we translate these fuel cycle factors into real life scenarios, exogenous factors such as human behavior, regulation, and economic constraint can drive models to differing conclusions.
+
+\subsection{The \cyclus Ecosystem}
+In this work, we will distinguish between the code \cyclus, and the collection of software \cyclus by labeling the latter the \cyclus ecosystem. The \cyclus ecosystem is comprised of a core set of codes: \cyclus, \cycamore, and \cymetric, developer maintained codes, and user-maintained codes.
+
+The code \cyclus houses the base engine and several fundamental facility types, such as preditor and prey facilities. \cycamore adds in a series of modular nuclear fuel cycle facilities that users can deploy to create all manner of fuel cycles, while \cymetric contains code allowing users to analyze their \cyclus runs. Together these three tools comprise the modular core of the \cyclus ecosystem; outside this core are codes maintained by the \cyclus developers and third party codes, which give users additional functionality to create high fidelity fuel cycle simulations.
+
+Many of the codes outside the core are third party archetypal facilities, and, as an agent-based code, \cyclus users can incorporate them in a plug-and-play fashion. When developers find an area of the fuel cycle not covered by the \cycamore archetypes, they can build their own to increase fidelity or expand their modeling capabilities.
+
+In this work will create and demonstrate three \cyclus archetypes:
+\begin{enumerate}
+    \item \gls{ever}
+    \item \gls{clover}
+    \item \gls{near}
+\end{enumerate}
+
+NEAR contains the functionality of both EVER and CLOVER, but we will deploy
+them separately to allow future users a simplified interface if they do not
+want all of NEAR's functionality. As such, we will present the theory behind
+EVER and CLOVER, but our results will include NEAR.
 
 \section{Theory}
 
 
 
+\cite{Car1953}
+
+
 \section{Preliminary Results}
-Upon completion of this work, we will have created and deployed
+
 
 
 \subsection{Existing Enrichment Fidelity}
 
 First
-
+\gls{ever}
 
 
 \subsection{Existing Core Loading Fidelity}
 
 Yikes
-
+\gls{clover}
 
 
 \section{Conclusions}
-We need some final thoughts
+
 
 
 
 \section{Acknowledgments}
-Insert Acknowledgments
+% insert the neup?
 
+% Copied from the appointment documents
+This research was supported in part by an appointment to the Oak Ridge National Laboratory Research Student Internships Program, sponsored by the U.S. Department of Energy and administered by the Oak Ridge Institute for Science and Education.
+
+% personalized
 The authors would like to thank Eva Davidson and Madicken Munk for their role
 in shaping the direction of this project, as well as (the wisconsin people?) and Kathryn Huff (?).
 
 \bibliographystyle{ans}
 \bibliography{bibliography}
+\printglossary[type=\acronymtype]
+\printglossary
 
 
 % Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur faucibus
