@@ -12,3 +12,6 @@ Houses the Core LOading Versatile non-Equilibrium Reactor (CLOVER), a generic Cy
 
 ## ./writing/
 This folder contains the writing on this project, and is governed by the license therein.
+
+> [!Important]
+> This code is licensed under a BSD 3-Clause License, with the exception of the writing directory (which contains a separate license).
