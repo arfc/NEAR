@@ -114,12 +114,12 @@
         <fuel_prefs>
           <val>100000</val> <val>1</val>
         </fuel_prefs>
-        <pref_change_times> <val>68</val> <val>68</val> </pref_change_times>
+        <pref_change_times> <val>68</val> <val>68</val> <val>268</val> <val>268</val> </pref_change_times>
         <pref_change_values>
-          <val>1</val> <val>100000</val>
+          <val>1</val> <val>100000</val> <val>100000</val> <val>1</val>
         </pref_change_values>
         <pref_change_commods>
-          <val>fresh_uox</val> <val>fresh_otr</val>
+          <val>fresh_uox</val> <val>fresh_otr</val> <val>fresh_uox</val> <val>fresh_otr</val>
         </pref_change_commods>
         <cycle_time>18</cycle_time>
         <refuel_time>1</refuel_time>

@@ -1,0 +1,14 @@
+<DeployInst>
+    <prototypes>
+        <val>Base_Reactor</val>
+        <val>Recycle_Reactor</val>
+    </prototypes>
+    <build_times>
+        <val>10</val>
+        <val>10</val>
+    </build_times>
+    <n_build>
+        <val>1</val>
+        <val>1</val>
+    </n_build>
+</DeployInst>
