@@ -6,8 +6,12 @@ from cymetric.tools import reduce, merge
 # PyNE.
 
 
-def transactions_nuc_built_in(evaler, senders=(), receivers=(),
-                     commodities=(), nucs=()):
+def transactions_nuc_built_in(
+        evaler,
+        senders=(),
+        receivers=(),
+        commodities=(),
+        nucs=()):
     """
     Filter the Transaction Data Frame, which include nuclide composition, on
     specific sending facility and receving facility. Applying nuclides
@@ -35,6 +39,7 @@ def transactions_nuc_built_in(evaler, senders=(), receivers=(),
     df = merge(df, base_col, compo, added_col)
 
     return df
+
 
 def transactions_built_in(evaler, senders=(), receivers=(), commodities=()):
     """
@@ -85,6 +90,7 @@ def transactions_built_in(evaler, senders=(), receivers=(), commodities=()):
                          'Prototype': 'ReceiverPrototype'})
 
     return trans
+
 
 def format_nucs_built_in(nucs):
     """
