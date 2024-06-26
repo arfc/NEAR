@@ -41,7 +41,9 @@ def total_sp_fr_fuel(transactions, fuels):
 
     for fuel in fuels:
         transactions.ffill(inplace=True)
-        transactions[f'total_fresh_fuel'] +=transactions[f'fresh_{fuel}_total']
-        transactions[f'total_spent_fuel'] +=transactions[f'spent_{fuel}_total']
+        transactions[f'total_fresh_fuel'] += \
+            transactions[f'fresh_{fuel}_total']
+        transactions[f'total_spent_fuel'] += \
+            transactions[f'spent_{fuel}_total']
 
     return transactions

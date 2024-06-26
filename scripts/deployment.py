@@ -41,9 +41,10 @@ def decom_by_prototype(evaler, commission_df, time):
     decommission_df = decommission_df.drop('Count', axis=1)
     decommission_df = pd.concat([decommission_df, negative_count], axis=1)
     decommission_df.rename(columns={'ExitTime': 'Time'}, inplace=True)
-    decommission_by_prototype = decommission_df.pivot(index='Time',
-                                                       columns='Prototype'
-                                                       )['Count'].reset_index()
+    decommission_by_prototype = \
+        decommission_df.pivot(
+            index='Time',
+            columns='Prototype')['Count'].reset_index()
     decommission_by_prototype = decommission_by_prototype.fillna(0)
 
     return decommission_by_prototype
