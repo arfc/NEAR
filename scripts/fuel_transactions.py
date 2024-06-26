@@ -9,7 +9,8 @@ def spent_fuel_transactions(transactions, fuels):
     fuels: list of strs
     """
     for fuel in fuels:
-        transactions[f'spent_{fuel}_total'] = transactions.loc[transactions['Commodity'] == f'spent_{fuel}']['Quantity'].cumsum()
+        transactions[f'spent_{fuel}_total'] = transactions.loc[
+            transactions['Commodity'] == f'spent_{fuel}']['Quantity'].cumsum()
 
     return transactions
 
@@ -24,7 +25,8 @@ def fresh_fuel_transactions(transactions, fuels):
     fuels: list of strs
     """
     for fuel in fuels:
-        transactions[f'fresh_{fuel}_total'] = transactions.loc[transactions['Commodity'] == f'fresh_{fuel}']['Quantity'].cumsum()
+        transactions[f'fresh_{fuel}_total'] = transactions.loc[
+            transactions['Commodity'] == f'fresh_{fuel}']['Quantity'].cumsum()
 
     return transactions
 
@@ -36,10 +38,10 @@ def total_sp_fr_fuel(transactions, fuels):
     """
     transactions[f'total_fresh_fuel'] = 0
     transactions[f'total_spent_fuel'] = 0
-    
+
     for fuel in fuels:
         transactions.ffill(inplace=True)
-        transactions[f'total_fresh_fuel'] += transactions[f'fresh_{fuel}_total']
-        transactions[f'total_spent_fuel'] += transactions[f'spent_{fuel}_total']
+        transactions[f'total_fresh_fuel'] +=transactions[f'fresh_{fuel}_total']
+        transactions[f'total_spent_fuel'] +=transactions[f'spent_{fuel}_total']
 
     return transactions
