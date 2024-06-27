@@ -302,3 +302,5 @@ TSWLatexianTemp*
 
 writing/abstract/example.pdf
 writing/abstract/example_figure.pdf
+
+__pycache__/
