@@ -6,7 +6,9 @@ def spent_fuel_transactions(transactions, fuels):
     Parameters
     ----------
     transactions: pd.DataFrame
+        All the material exchanges across the simulation.
     fuels: list of strs
+        The types of fuel traded.
     """
     for fuel in fuels:
         transactions[f'spent_{fuel}_total'] = transactions.loc[
@@ -22,7 +24,9 @@ def fresh_fuel_transactions(transactions, fuels):
     Parameters
     ----------
     transactions: pd.DataFrame
+        All the material exchanges across the simulation.
     fuels: list of strs
+        The types of fuel traded.
     """
     for fuel in fuels:
         transactions[f'fresh_{fuel}_total'] = transactions.loc[
@@ -35,6 +39,13 @@ def total_sp_fr_fuel(transactions, fuels):
     """
     Adds the fresh fuel of each fuel type and total spent fuel of each fuel
     type to a separate total for fresh and spent fuel.
+
+    Parameters
+    ----------
+    transactions: pd.DataFrame
+        All the material exchanges across the simulation.
+    fuels: list of strs
+        The types of fuel traded.
     """
     transactions[f'total_fresh_fuel'] = 0
     transactions[f'total_spent_fuel'] = 0

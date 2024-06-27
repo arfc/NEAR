@@ -99,6 +99,7 @@ def format_nucs_built_in(nucs):
 
     Parameters
     ----------
-    nucs :  of nuclides
+    nucs: float
+      of nuclides
     """
     return [nucname.id(nuc) for nuc in nucs]
