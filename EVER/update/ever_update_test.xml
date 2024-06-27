@@ -110,10 +110,10 @@
           <val>fresh_uox</val>
         </fuel_inrecipes>
         <fuel_outcommods>
-          <val>spent_uox</val>
+          <val>used_uox</val>
         </fuel_outcommods>
         <fuel_outrecipes>
-          <val>spent_uox</val>
+          <val>used_uox</val>
         </fuel_outrecipes>
         <cycle_time>18</cycle_time>
         <refuel_time>1</refuel_time>
@@ -137,10 +137,10 @@
           <val>fresh_uox</val> <val>fresh_otr</val>
         </fuel_inrecipes>
         <fuel_outcommods>
-          <val>spent_uox</val> <val>spent_otr_u</val>
+          <val>used_uox</val> <val>used_otr_u</val>
         </fuel_outcommods>
         <fuel_outrecipes>
-          <val>spent_uox</val> <val>spent_otr_u</val>
+          <val>used_uox</val> <val>used_otr_u</val>
         </fuel_outrecipes>
         <fuel_prefs>
           <val>100000</val> <val>1</val>
@@ -174,10 +174,10 @@
           <val>fresh_uox</val>
         </fuel_inrecipes>
         <fuel_outcommods>
-          <val>spent_uox</val>
+          <val>used_uox</val>
         </fuel_outcommods>
         <fuel_outrecipes>
-          <val>spent_uox</val>
+          <val>used_uox</val>
         </fuel_outrecipes>
         <recipe_update_times> <val>68</val> <val>268</val> </recipe_update_times>
         <recipe_update_commods>
@@ -187,7 +187,7 @@
           <val>fresh_otr</val> <val>fresh_uox</val>
         </recipe_update_in>
         <recipe_update_out>
-          <val>spent_otr_u</val> <val>spent_uox</val>
+          <val>used_otr_u</val> <val>used_uox</val>
         </recipe_update_out>
         <cycle_time>18</cycle_time>
         <refuel_time>1</refuel_time>
@@ -205,8 +205,8 @@
       <Sink>
         <in_commods>
           <val>tails</val>
-          <val>spent_uox</val>
-          <val>spent_otr_u</val>
+          <val>used_uox</val>
+          <val>used_otr_u</val>
         </in_commods>
         <!-- Yucca Mountain Repository -->
         <latitude>36.8286</latitude>
@@ -304,7 +304,7 @@
   </recipe>
 
   <recipe>
-    <name>spent_uox</name>
+    <name>used_uox</name>
     <basis>mass</basis>
     <nuclide>
       <id>92235</id>
@@ -325,7 +325,7 @@
   </recipe>
 
   <recipe>
-    <name>spent_otr_u</name>
+    <name>used_otr_u</name>
     <basis>mass</basis>
     <nuclide>
       <id>92235</id>

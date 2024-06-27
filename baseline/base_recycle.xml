@@ -31,7 +31,7 @@
     <solution_priority>1.0</solution_priority>
   </commodity>
   <commodity>
-    <name>spent_uox</name>
+    <name>used_uox</name>
     <solution_priority>1.0</solution_priority>
   </commodity>
   <commodity>
@@ -95,7 +95,7 @@
   </recipe>
 
   <recipe>
-    <name>spent_uox</name>
+    <name>used_uox</name>
     <basis>mass</basis>
     <nuclide>
       <id>92235</id>
@@ -160,8 +160,8 @@
       <Reactor>
         <fuel_incommods> <val>fresh_uox</val> </fuel_incommods>
         <fuel_inrecipes> <val>fresh_uox</val> </fuel_inrecipes>
-        <fuel_outcommods> <val>spent_uox</val> </fuel_outcommods>
-        <fuel_outrecipes> <val>spent_uox</val> </fuel_outrecipes>
+        <fuel_outcommods> <val>used_uox</val> </fuel_outcommods>
+        <fuel_outrecipes> <val>used_uox</val> </fuel_outrecipes>
         <cycle_time>18</cycle_time>
         <refuel_time>1</refuel_time>
         <assem_size>33000</assem_size>
@@ -177,7 +177,7 @@
     <config>
       <Separations>
         <feed_commods>
-          <val>spent_uox</val>
+          <val>used_uox</val>
           <!-- <val>used_mox</val> -->
         </feed_commods>
         <feed_commod_prefs>
@@ -256,11 +256,11 @@
           <val>30000</val>
         </fuel_prefs> -->
         <fuel_outcommods>
-          <!-- <val>spent_uox</val> -->
+          <!-- <val>used_uox</val> -->
           <val>used_mox</val>
         </fuel_outcommods>
         <fuel_outrecipes>
-          <!-- <val>spent_uox</val> -->
+          <!-- <val>used_uox</val> -->
           <val>used_mox</val>
         </fuel_outrecipes>
         <cycle_time>18</cycle_time>
@@ -287,7 +287,7 @@
     <config>
       <Sink>
         <in_commods>
-          <val>spent_uox</val>
+          <val>used_uox</val>
           <val>tails</val>
           <val>separated_waste</val>
           <val>used_mox</val>
@@ -310,7 +310,7 @@
           <number>1</number>
         </entry>
         <entry>
-          <prototype>NuclearRepository</prototype>
+          <prototype>Storage</prototype>
           <number>1</number>
         </entry>
         <entry>

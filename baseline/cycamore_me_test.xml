@@ -106,10 +106,10 @@
           <val>fresh_uox</val> <val>fresh_otr</val>
         </fuel_inrecipes>
         <fuel_outcommods>
-          <val>spent_uox</val> <val>spent_otr_u</val>
+          <val>used_uox</val> <val>used_otr_u</val>
         </fuel_outcommods>
         <fuel_outrecipes>
-          <val>spent_uox</val> <val>spent_otr_u</val>
+          <val>used_uox</val> <val>used_otr_u</val>
         </fuel_outrecipes>
         <fuel_prefs>
           <val>100000</val> <val>1</val>
@@ -137,8 +137,8 @@
       <Sink>
         <in_commods>
           <val>tails</val>
-          <val>spent_uox</val>
-          <val>spent_otr_u</val>
+          <val>used_uox</val>
+          <val>used_otr_u</val>
         </in_commods>
         <!-- Yucca Mountain Repository -->
         <latitude>36.8286</latitude>
@@ -236,7 +236,7 @@
   </recipe>
 
   <recipe>
-    <name>spent_uox</name>
+    <name>used_uox</name>
     <basis>mass</basis>
     <nuclide>
       <id>92235</id>
@@ -257,7 +257,7 @@
   </recipe>
 
   <recipe>
-    <name>spent_otr_u</name>
+    <name>used_otr_u</name>
     <basis>mass</basis>
     <nuclide>
       <id>92235</id>

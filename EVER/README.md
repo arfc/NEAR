@@ -25,7 +25,7 @@ You can consult the example in `/update/ever_update_test.xml`, or use the follow
     <val>fresh_otr</val> <val>fresh_uox</val>
 </recipe_update_in>
 <recipe_update_out>
-    <val>spent_otr_u</val> <val>spent_uox</val>
+    <val>used_otr_u</val> <val>used_uox</val>
 </recipe_update_out>
 ```
 
