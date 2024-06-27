@@ -283,7 +283,7 @@
   </facility>
 
   <facility>
-    <name>NuclearRepository</name>
+    <name>Storage</name>
     <config>
       <Sink>
         <in_commods>
