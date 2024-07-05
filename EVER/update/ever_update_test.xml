@@ -16,6 +16,10 @@
     </spec>
     <spec>
       <lib>cycamore</lib>
+      <name>Ever</name>
+    </spec>
+    <spec>
+      <lib>cycamore</lib>
       <name>Sink</name>
     </spec>
     <spec>
@@ -100,6 +104,33 @@
     <config>
       <Reactor>
         <fuel_incommods>
+          <val>fresh_uox</val>
+        </fuel_incommods>
+        <fuel_inrecipes>
+          <val>fresh_uox</val>
+        </fuel_inrecipes>
+        <fuel_outcommods>
+          <val>used_uox</val>
+        </fuel_outcommods>
+        <fuel_outrecipes>
+          <val>used_uox</val>
+        </fuel_outrecipes>
+        <cycle_time>18</cycle_time>
+        <refuel_time>1</refuel_time>
+        <assem_size>33000</assem_size> <!-- in kg -->
+        <n_assem_core>3</n_assem_core>
+        <n_assem_batch>1</n_assem_batch>
+        <power_cap>1000</power_cap> <!-- in MWe -->
+      </Reactor>
+    </config>
+  </facility>
+
+  <facility>
+    <name>Base_Pref_Reactor</name>
+    <lifetime>720</lifetime>
+    <config>
+      <Reactor>
+        <fuel_incommods>
           <val>fresh_uox</val> <val>fresh_otr</val>
         </fuel_incommods>
         <fuel_inrecipes>
@@ -128,6 +159,43 @@
         <n_assem_batch>1</n_assem_batch>
         <power_cap>1000</power_cap> <!-- in MWe -->
       </Reactor>
+    </config>
+  </facility>
+
+  <facility>
+    <name>EVER_Update_Reactor</name>
+    <lifetime>720</lifetime>
+    <config>
+      <Ever>
+        <fuel_incommods>
+          <val>fresh_uox</val>
+        </fuel_incommods>
+        <fuel_inrecipes>
+          <val>fresh_uox</val>
+        </fuel_inrecipes>
+        <fuel_outcommods>
+          <val>used_uox</val>
+        </fuel_outcommods>
+        <fuel_outrecipes>
+          <val>used_uox</val>
+        </fuel_outrecipes>
+        <recipe_update_times> <val>68</val> <val>268</val> </recipe_update_times>
+        <recipe_update_commods>
+          <val>fresh_otr</val> <val>fresh_uox</val>
+        </recipe_update_commods>
+        <recipe_update_in>
+          <val>fresh_otr</val> <val>fresh_uox</val>
+        </recipe_update_in>
+        <recipe_update_out>
+          <val>used_otr_u</val> <val>used_uox</val>
+        </recipe_update_out>
+        <cycle_time>18</cycle_time>
+        <refuel_time>1</refuel_time>
+        <assem_size>33000</assem_size> <!-- in kg -->
+        <n_assem_core>3</n_assem_core>
+        <n_assem_batch>1</n_assem_batch>
+        <power_cap>1000</power_cap> <!-- in MWe -->
+      </Ever>
     </config>
   </facility>
 
@@ -178,7 +246,7 @@
         </entry>
       </initialfacilitylist>
       <config>
-	      <xi:include href="base_deployinst.xml"/>
+	      <xi:include href="update_deployinst.xml"/>
       </config>
     </institution>
   </region>

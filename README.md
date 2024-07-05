@@ -1,5 +1,5 @@
 # NEAR
-![Changelog CI Status](https://github.com/<username>/<repository>/workflows/Changelog%20CI/badge.svg)
+![Changelog CI Status](https://github.com/nsryan2/NEAR/workflows/Changelog%20CI/badge.svg)
 
 NEAR (Non-Equilibrium Archetypes of Reactors): Houses cyclus archetypes for non-equilibrium reactors with core-loading and enrichment variability.
 
