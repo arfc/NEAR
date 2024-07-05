@@ -192,7 +192,11 @@
     </nuclide>
     <nuclide>
       <id>92238</id>
-      <comp>0.99289</comp>
+      <comp>0.94839</comp>
+    </nuclide>
+    <nuclide>
+      <id>92234</id>
+      <comp>0.0445</comp>
     </nuclide>
   </recipe>
 
@@ -222,16 +226,21 @@
       </nuclide>
     </recipe>
 
+  <!-- Table 10 from https://www.oecd-nea.org/jcms/pl_19182/benchmark-study-on-nuclear-fuel-cycle-transition-scenarios-analysis-codes?details=true -->
   <recipe>
     <name>fresh_uox</name>
     <basis>mass</basis>
     <nuclide>
         <id>92235</id>
-        <comp>0.04</comp>
+        <comp>0.0495</comp>
     </nuclide>
     <nuclide>
         <id>92238</id>
-        <comp>0.96</comp>
+        <comp>0.950055</comp>
+    </nuclide>
+    <nuclide>
+      <id>92234</id>
+      <comp>0.0445</comp>
     </nuclide>
   </recipe>
 
