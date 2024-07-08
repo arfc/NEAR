@@ -12,7 +12,9 @@ C --> E(Run)
 D --> E
 ```
 
-You can consult the example in `/update/ever_update_test.xml`, or use the following special tags in your input file:
+You can consult the example in `/update/ever_update_test.xml`, or use the
+following special tags in your input file in addition to the existing cycamore
+reactor tags:
 
 ```
 <recipe_update_times>
@@ -27,6 +29,9 @@ You can consult the example in `/update/ever_update_test.xml`, or use the follow
 <recipe_update_out>
     <val>used_otr_u</val> <val>used_uox</val>
 </recipe_update_out>
+<update_commod>
+    <val>used_otr_u</val> <val>used_uox</val>
+<update_commod>
 ```
 
 > [!Important]
