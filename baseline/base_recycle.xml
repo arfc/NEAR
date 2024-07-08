@@ -60,84 +60,122 @@
     </nuclide>
     <nuclide>
       <id>92238</id>
-      <comp>0.99289</comp>
+      <comp>0.94839</comp>
+    </nuclide>
+    <nuclide>
+      <id>92234</id>
+      <comp>0.00445</comp>
     </nuclide>
   </recipe>
 
+  <!-- Table 10 from https://www.oecd-nea.org/jcms/pl_19182/benchmark-study-on-nuclear-fuel-cycle-transition-scenarios-analysis-codes?details=true -->
   <recipe>
     <name>fresh_uox</name>
     <basis>mass</basis>
     <nuclide>
-      <id>92235</id>
-      <comp>0.04</comp>
+        <id>92235</id>
+        <comp>0.0495</comp>
     </nuclide>
     <nuclide>
-      <id>92238</id>
-      <comp>0.96</comp>
+        <id>92238</id>
+        <comp>0.950055</comp>
+    </nuclide>
+    <nuclide>
+      <id>92234</id>
+      <comp>0.0445</comp>
     </nuclide>
   </recipe>
 
+<!-- Table 11 https://www.oecd-nea.org/jcms/pl_19182/benchmark-study-on-nuclear-fuel-cycle-transition-scenarios-analysis-codes?details=true -->
   <recipe>
     <name>fresh_mox</name>
     <basis>mass</basis>
     <nuclide>
       <id>92235</id>
-      <comp>0.008</comp>
+      <comp>0.002056</comp>
     </nuclide>
     <nuclide>
       <id>92238</id>
-      <comp>0.93</comp>
+      <comp>0.907684</comp>
+    </nuclide>
+    <nuclide>
+      <id>94238</id>
+      <comp>0.002816</comp>
     </nuclide>
     <nuclide>
       <id>94239</id>
-      <comp>0.062</comp>
+      <comp>0.046565</comp>
+    </nuclide>
+    <nuclide>
+      <id>94240</id>
+      <comp>0.021951</comp>
+    </nuclide>
+    <nuclide>
+      <id>94241</id>
+      <comp>0.010606</comp>
+    </nuclide>
+    <nuclide>
+      <id>94242</id>
+      <comp>0.007257</comp>
+    </nuclide>
+    <nuclide>
+      <id>95241</id>
+      <comp>0.001065</comp>
     </nuclide>
   </recipe>
 
   <recipe>
-    <name>used_uox</name>
-    <basis>mass</basis>
-    <nuclide>
-      <id>92235</id>
-      <comp>0.0011</comp>
-    </nuclide>
-    <nuclide>
-      <id>92238</id>
-      <comp>0.94</comp>
-    </nuclide>
-    <nuclide>
-      <id>94239</id>
-      <comp>0.009</comp>
-    </nuclide>
-    <nuclide>
-      <id>55137</id>
-      <comp>0.04</comp>
-    </nuclide>
+  	 <name>used_uox</name>
+  	 <basis>mass</basis>
+  	 <nuclide><id>92232</id><comp>0.0019</comp></nuclide>
+  	 <nuclide><id>92234</id><comp>193.0</comp></nuclide>
+  	 <nuclide><id>92235</id><comp>8060.0</comp></nuclide>
+  	 <nuclide><id>92236</id><comp>6860.0</comp></nuclide>
+  	 <nuclide><id>92238</id><comp>908000.0</comp></nuclide>
+  	 <nuclide><id>94236</id><comp>0.00426</comp></nuclide>
+  	 <nuclide><id>94238</id><comp>486.0</comp></nuclide>
+  	 <nuclide><id>94239</id><comp>6620.0</comp></nuclide>
+  	 <nuclide><id>94240</id><comp>3120.0</comp></nuclide>
+  	 <nuclide><id>94241</id><comp>2080.0</comp></nuclide>
+  	 <nuclide><id>94242</id><comp>1080.0</comp></nuclide>
+  	 <nuclide><id>95241</id><comp>75.3</comp></nuclide>
+  	 <nuclide><id>95242</id><comp>2.71</comp></nuclide> <!--was 95242M-->
+  	 <nuclide><id>95243</id><comp>299.0</comp></nuclide>
+  	 <nuclide><id>93237</id><comp>920.0</comp></nuclide>
+  	 <nuclide><id>96242</id><comp>30.7</comp></nuclide>
+  	 <nuclide><id>96243</id><comp>0.986</comp></nuclide>
+  	 <nuclide><id>96244</id><comp>156.0</comp></nuclide>
+  	 <nuclide><id>96245</id><comp>13.1</comp></nuclide>
+  	 <nuclide><id>96246</id><comp>1.66</comp></nuclide>
+  	 <nuclide><id>96247</id><comp>0.0322</comp></nuclide>
+  	 <nuclide><id>96248</id><comp>0.00285</comp></nuclide>
   </recipe>
 
   <recipe>
     <name>used_mox</name>
     <basis>mass</basis>
-    <nuclide>
-      <id>92235</id>
-      <comp>0.002</comp>
-    </nuclide>
-    <nuclide>
-      <id>92238</id>
-      <comp>0.94</comp>
-    </nuclide>
-    <nuclide>
-      <id>94239</id>
-      <comp>0.01</comp>
-    </nuclide>
-    <nuclide>
-      <id>55137</id>
-      <comp>0.046</comp>
-    </nuclide>
-    <nuclide>
-      <id>94240</id>
-      <comp>0.002</comp>
-    </nuclide>
+    <nuclide><id>92232</id><comp>0.0019</comp></nuclide>
+    <nuclide><id>92234</id><comp>193.0</comp></nuclide>
+    <nuclide><id>92235</id><comp>8060.0</comp></nuclide>
+    <nuclide><id>92236</id><comp>6860.0</comp></nuclide>
+    <nuclide><id>92238</id><comp>908000.0</comp></nuclide>
+    <nuclide><id>94236</id><comp>0.00426</comp></nuclide>
+    <nuclide><id>94238</id><comp>486.0</comp></nuclide>
+    <nuclide><id>94239</id><comp>6620.0</comp></nuclide>
+    <nuclide><id>94240</id><comp>3120.0</comp></nuclide>
+    <nuclide><id>94241</id><comp>2080.0</comp></nuclide>
+    <nuclide><id>94242</id><comp>1080.0</comp></nuclide>
+    <nuclide><id>95241</id><comp>75.3</comp></nuclide>
+    <nuclide><id>95242</id><comp>2.71</comp></nuclide>
+    <nuclide><id>95243</id><comp>299.0</comp></nuclide>
+    <nuclide><id>93237</id><comp>920.0</comp></nuclide>
+    <nuclide><id>96242</id><comp>30.7</comp></nuclide>
+    <nuclide><id>96243</id><comp>0.986</comp></nuclide>
+    <nuclide><id>96244</id><comp>156.0</comp></nuclide>
+    <nuclide><id>96245</id><comp>13.1</comp></nuclide>
+    <nuclide><id>96246</id><comp>1.66</comp></nuclide>
+    <nuclide><id>96247</id><comp>0.0322</comp></nuclide>
+    <nuclide><id>96248</id><comp>0.00285</comp></nuclide>
   </recipe>
 
   <facility>

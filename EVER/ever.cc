@@ -216,14 +216,12 @@ void Ever::Tick() {
   // update recipes (for EVER)
   for (int i = 0; i < recipe_update_times.size(); i++) {
     int change_t = recipe_update_times[i];
-    if (t != change_t) {
-      continue;
+    if (t == change_t) {
+      fuel_incommods[0] = recipe_update_commods[i];
+      fuel_inrecipes[0] = recipe_update_in[i];
+      fuel_outrecipes[0] = recipe_update_out[i];
+      break;
     }
-
-    std::string incommod = recipe_update_commods[i];
-    fuel_incommods[0] = recipe_update_commods[i];
-    fuel_inrecipes[0] = recipe_update_in[i];
-    fuel_outrecipes[0] = recipe_update_out[i];
   }
 }
 

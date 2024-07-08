@@ -50,7 +50,7 @@
     </config>
   </facility>
 
-  <facility>
+  <!-- <facility>
     <name>Mill</name>
     <config>
       <Storage>
@@ -62,7 +62,7 @@
           <val>u3o8</val>
         </out_commods>
         <residence_time>1</residence_time>
-        <!-- White Mesa Uranium Mill (Utah) -->
+        White Mesa Uranium Mill (Utah)
         <latitude>37.468419</latitude>
         <longitude>-109.467586</longitude>
       </Storage>
@@ -81,20 +81,20 @@
           <val>uf6</val>
         </out_commods>
         <residence_time>1</residence_time>
-        <!-- Honeywell Uranium Conversion Facility (IL) -->
+        Honeywell Uranium Conversion Facility (IL)
         <latitude>37.171768</latitude>
         <longitude>-88.757039</longitude>
       </Storage>
     </config>
-  </facility>
+  </facility> -->
 
   <facility>
     <name>Enrichment</name>
     <config>
       <Enrichment>
-        <feed_commod>uf6</feed_commod>
-        <feed_recipe>uf6</feed_recipe>
-        <product_commod>enr_u</product_commod>
+        <feed_commod>nat_u</feed_commod>
+        <feed_recipe>nat_u</feed_recipe>
+        <product_commod>fresh_uox</product_commod>
         <tails_commod>tails</tails_commod>
         <tails_assay>0.002</tails_assay>
         <max_enrich>0.045</max_enrich>
@@ -105,7 +105,7 @@
     </config>
   </facility>
 
-  <facility>
+  <!-- <facility>
     <name>FuelFab</name>
     <config>
       <Storage>
@@ -117,12 +117,12 @@
           <val>fresh_uox</val>
         </out_commods>
         <residence_time>1</residence_time>
-        <!-- Westing House Fuel Fab (SC) -->
+        Westing House Fuel Fab (SC)
         <latitude>33.8749</latitude>
         <longitude>-80.8976</longitude>
       </Storage>
     </config>
-  </facility>
+  </facility> -->
 
   <facility>
     <name>Base_Reactor</name>
@@ -143,7 +143,7 @@
     </config>
 </facility>
 
-  <facility>
+  <!-- <facility>
     <name>WetStorage</name>
     <config>
       <Storage>
@@ -155,12 +155,12 @@
           <val>dry_used_uox</val>
         </out_commods>
         <residence_time>72</residence_time>
-        <!-- Yucca Mountain Repository -->
+        Yucca Mountain Repository
         <latitude>36.8286</latitude>
         <longitude>-116.4364</longitude>
       </Storage>
     </config>
-  </facility>
+  </facility> -->
 
   <facility>
     <name>Storage</name>
@@ -188,28 +188,28 @@
       <initialfacilitylist>
         <entry>
           <prototype>Mine</prototype>
-          <number>5</number>
+          <number>1</number>
         </entry>
-        <entry>
+        <!-- <entry>
           <prototype>Mill</prototype>
           <number>5</number>
         </entry>
         <entry>
           <prototype>Conversion</prototype>
           <number>5</number>
-        </entry>
+        </entry> -->
         <entry>
           <prototype>Enrichment</prototype>
-          <number>5</number>
+          <number>1</number>
         </entry>
-        <entry>
+        <!-- <entry>
           <prototype>FuelFab</prototype>
           <number>5</number>
         </entry>
         <entry>
           <prototype>WetStorage</prototype>
           <number>1</number>
-        </entry>
+        </entry> -->
         <entry>
           <prototype>Storage</prototype>
           <number>1</number>
@@ -230,11 +230,15 @@
     </nuclide>
     <nuclide>
       <id>92238</id>
-      <comp>0.99289</comp>
+      <comp>0.94839</comp>
+    </nuclide>
+    <nuclide>
+      <id>92234</id>
+      <comp>0.0445</comp>
     </nuclide>
   </recipe>
 
-<recipe>
+<!-- <recipe>
     <name>u3o8</name>
     <basis>atom</basis>
     <nuclide>
@@ -271,18 +275,23 @@
         <id>92238</id>
         <comp>0.96</comp>
     </nuclide>
-  </recipe>
+  </recipe> -->
 
+<!-- Table 10 from https://www.oecd-nea.org/jcms/pl_19182/benchmark-study-on-nuclear-fuel-cycle-transition-scenarios-analysis-codes?details=true -->
   <recipe>
     <name>fresh_uox</name>
     <basis>mass</basis>
     <nuclide>
         <id>92235</id>
-        <comp>0.04</comp>
+        <comp>0.0495</comp>
     </nuclide>
     <nuclide>
         <id>92238</id>
-        <comp>0.96</comp>
+        <comp>0.950055</comp>
+    </nuclide>
+    <nuclide>
+      <id>92234</id>
+      <comp>0.0445</comp>
     </nuclide>
   </recipe>
 
