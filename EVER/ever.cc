@@ -119,6 +119,10 @@ void Ever::EnterNotify() {
     ss << "prototype '" << prototype() << "' has " << recipe_update_out.size()
        << " recipe_update_out vals, expected " << nu << "\n";
   }
+  if (update_outcommod.size() != nu) {
+    ss << "prototype '" << prototype() << "' has " << update_outcommod.size()
+       << " update_outcommod vals, expected " << nu << "\n";
+  }
 
   if (ss.str().size() > 0) {
     throw cyclus::ValueError(ss.str());
@@ -220,6 +224,7 @@ void Ever::Tick() {
       fuel_incommods[0] = recipe_update_commods[i];
       fuel_inrecipes[0] = recipe_update_in[i];
       fuel_outrecipes[0] = recipe_update_out[i];
+      fuel_outcommods[0] = update_outcommod[i];
       break;
     }
   }

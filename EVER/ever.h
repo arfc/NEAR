@@ -301,6 +301,16 @@ class Ever : public cyclus::Facility,
   }
   std::vector<std::string> recipe_update_out;
 
+  #pragma cyclus var { \
+    "default": [], \
+    "uilabel": "New Commodity for Spent Fuel", \
+    "doc": "(OPTIONAL) The new output commodity to use at each update." \
+           " Same order as and direct correspondence to the specified recipe " \
+           "change times.", \
+    "uitype": ["oneormore", "outcommodity"], \
+  }
+  std::vector<std::string> update_outcommod;
+
  //////////// inventory and core params ////////////
   #pragma cyclus var { \
     "doc": "Mass (kg) of a single assembly.", \
