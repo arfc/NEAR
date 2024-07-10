@@ -100,27 +100,22 @@
     <config>
       <Ever>
         <fuel_incommods>
-          <val>fresh_uox</val>
+          <val>fresh_haleu</val>
         </fuel_incommods>
         <fuel_inrecipes>
-          <val>fresh_uox</val>
+          <val>fresh_haleu</val>
         </fuel_inrecipes>
         <fuel_outcommods>
-          <val>used_uox</val>
+          <val>used_haleu</val>
         </fuel_outcommods>
         <fuel_outrecipes>
-          <val>used_uox</val>
+          <val>used_haleu</val>
         </fuel_outrecipes>
-        <recipe_update_times> <val>68</val> <val>268</val> </recipe_update_times>
-        <recipe_update_commods>
-          <val>fresh_haleu</val> <val>fresh_uox</val>
-        </recipe_update_commods>
-        <recipe_update_in>
-          <val>fresh_haleu</val> <val>fresh_uox</val>
-        </recipe_update_in>
-        <recipe_update_out>
-          <val>used_haleu</val> <val>used_uox</val>
-        </recipe_update_out>
+        <recipe_update_times><val>70</val></recipe_update_times>
+        <recipe_update_commods><val>fresh_uox</val></recipe_update_commods>
+        <recipe_update_in><val>fresh_uox</val></recipe_update_in>
+        <update_outcommod><val>used_uox</val></update_outcommod>
+        <recipe_update_out><val>used_uox</val></recipe_update_out>
         <cycle_time>18</cycle_time>
         <refuel_time>1</refuel_time>
         <assem_size>33000</assem_size> <!-- in kg -->
@@ -178,7 +173,7 @@
         </entry>
       </initialfacilitylist>
       <config>
-	      <xi:include href="update_deployinst1.xml"/>
+	      <xi:include href="one_update_deployinst.xml"/>
       </config>
     </institution>
   </region>
