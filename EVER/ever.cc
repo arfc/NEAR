@@ -139,7 +139,7 @@ void Ever::Tick() {
   // following the cycle_step update - allowing for the all reactor events to
   // occur and be recorded on the "beginning" of a time step.  Another reason
   // they
-  // can't go at the beginnin of the Tock is so that resource exchange has a
+  // can't go at the beginning of the Tock is so that resource exchange has a
   // chance to occur after the discharge on this same time step.
 
   if (retired()) {
@@ -192,7 +192,7 @@ void Ever::Tick() {
     }
 
     std::string incommod = pref_change_commods[i];
-    for (int j = 0; j < fuel_incommods.size(); j++) {
+    for (int j = 1; j < fuel_incommods.size(); j++) {
       if (fuel_incommods[j] == incommod) {
         fuel_prefs[j] = pref_change_values[i];
         break;
