@@ -96,7 +96,7 @@
 
   <facility>
     <name>EVER_Update_Reactor</name>
-    <lifetime>720</lifetime>
+    <lifetime>420</lifetime>
     <config>
       <Ever>
         <fuel_incommods>
@@ -111,10 +111,10 @@
         <fuel_outrecipes>
           <val>used_haleu</val>
         </fuel_outrecipes>
-        <recipe_update_times><val>70</val></recipe_update_times>
-        <recipe_update_commods><val>fresh_uox</val></recipe_update_commods>
+        <recipe_update_times><val>200</val></recipe_update_times>
+        <update_incommods><val>fresh_uox</val></update_incommods>
         <recipe_update_in><val>fresh_uox</val></recipe_update_in>
-        <update_outcommod><val>used_uox</val></update_outcommod>
+        <update_outcommods><val>used_uox</val></update_outcommods>
         <recipe_update_out><val>used_uox</val></recipe_update_out>
         <cycle_time>18</cycle_time>
         <refuel_time>1</refuel_time>
@@ -173,7 +173,17 @@
         </entry>
       </initialfacilitylist>
       <config>
-	      <xi:include href="one_update_deployinst.xml"/>
+	      <DeployInst>
+          <prototypes>
+              <val>EVER_Update_Reactor</val>
+          </prototypes>
+          <build_times>
+              <val>10</val>
+          </build_times>
+          <n_build>
+              <val>1</val>
+          </n_build>
+        </DeployInst>
       </config>
     </institution>
   </region>

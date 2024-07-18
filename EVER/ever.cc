@@ -193,7 +193,7 @@ void Ever::Tick() {
     }
 
     std::string incommod = pref_change_commods[i];
-    for (int j = 1; j < fuel_incommods.size(); j++) {
+    for (int j = 0; j < fuel_incommods.size(); j++) {
       if (fuel_incommods[j] == incommod) {
         fuel_prefs[j] = pref_change_values[i];
         break;
