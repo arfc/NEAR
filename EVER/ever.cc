@@ -106,10 +106,10 @@ void Ever::EnterNotify() {
 
   // EVER pre-determined update consistency checking:
   int nu = recipe_update_times.size();
-  if (recipe_update_commods.size() != nu) {
+  if (update_incommods.size() != nu) {
     ss << "prototype '" << prototype() << "' has "
-       << recipe_update_commods.size()
-       << " recipe_update_commods vals, expected " << nu << "\n";
+       << update_incommods.size()
+       << " update_incommods vals, expected " << nu << "\n";
   }
   if (recipe_update_in.size() != nu) {
     ss << "prototype '" << prototype() << "' has " << recipe_update_in.size()
@@ -119,9 +119,10 @@ void Ever::EnterNotify() {
     ss << "prototype '" << prototype() << "' has " << recipe_update_out.size()
        << " recipe_update_out vals, expected " << nu << "\n";
   }
-  if (update_outcommod.size() != nu) {
-    ss << "prototype '" << prototype() << "' has " << update_outcommod.size()
-       << " update_outcommod vals, expected " << nu << "\n";
+  if (update_outcommods.size() != nu) {
+    ss << "prototype '" << prototype() << "' has "
+       << update_outcommods.size()
+       << " update_outcommods vals, expected " << nu << "\n";
   }
 
   if (ss.str().size() > 0) {
@@ -139,7 +140,7 @@ void Ever::Tick() {
   // following the cycle_step update - allowing for the all reactor events to
   // occur and be recorded on the "beginning" of a time step.  Another reason
   // they
-  // can't go at the beginning of the Tock is so that resource exchange has a
+  // can't go at the beginnin of the Tock is so that resource exchange has a
   // chance to occur after the discharge on this same time step.
 
   if (retired()) {
@@ -201,30 +202,30 @@ void Ever::Tick() {
   }
 
   // change recipes
-  for (int i = 0; i < recipe_change_times.size(); i++) {
-    int change_t = recipe_change_times[i];
-    if (t != change_t) {
-      continue;
-    }
+  // for (int i = 0; i < recipe_change_times.size(); i++) {
+  //   int change_t = recipe_change_times[i];
+  //   if (t != change_t) {
+  //     continue;
+  //   }
 
-    std::string incommod = recipe_change_commods[i];
-    for (int j = 0; j < fuel_incommods.size(); j++) {
-      if (fuel_incommods[j] == incommod) {
-        fuel_inrecipes[j] = recipe_change_in[i];
-        fuel_outrecipes[j] = recipe_change_out[i];
-        break;
-      }
-    }
-  }
+  //   std::string incommod = recipe_change_commods[i];
+  //   for (int j = 0; j < fuel_incommods.size(); j++) {
+  //     if (fuel_incommods[j] == incommod) {
+  //       fuel_inrecipes[j] = recipe_change_in[i];
+  //       fuel_outrecipes[j] = recipe_change_out[i];
+  //       break;
+  //     }
+  //   }
+  // }
 
   // update recipes (for EVER)
   for (int i = 0; i < recipe_update_times.size(); i++) {
     int change_t = recipe_update_times[i];
     if (t == change_t) {
-      fuel_incommods[0] = recipe_update_commods[i];
+      fuel_incommods[0] = update_incommods[i];
       fuel_inrecipes[0] = recipe_update_in[i];
       fuel_outrecipes[0] = recipe_update_out[i];
-      fuel_outcommods[0] = update_outcommod[i];
+      fuel_outcommods[0]= update_outcommods[i];
       break;
     }
   }

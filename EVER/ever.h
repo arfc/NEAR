@@ -279,7 +279,7 @@ class Ever : public cyclus::Facility,
            "specified recipe update times.", \
     "uitype": ["oneormore", "incommodity"], \
   }
-  std::vector<std::string> recipe_update_commods;
+  std::vector<std::string> update_incommods;
 
   #pragma cyclus var { \
     "default": [], \
@@ -309,7 +309,7 @@ class Ever : public cyclus::Facility,
            "change times.", \
     "uitype": ["oneormore", "outcommodity"], \
   }
-  std::vector<std::string> update_outcommod;
+  std::vector<std::string> update_outcommods;
 
  //////////// inventory and core params ////////////
   #pragma cyclus var { \

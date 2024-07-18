@@ -505,7 +505,7 @@ TEST(EverTests, RecipeUpdate) {
      "  <n_assem_batch>1</n_assem_batch>  "
      ""
      "  <recipe_update_times> <val>25</val> <val>35</val> <val>45</val> </recipe_update_times>"
-     "  <recipe_update_commods> <val>enriched_u</val> <val>enriched_u</val> <val>enriched_u</val> </recipe_update_commods>"
+     "  <update_incommods> <val>enriched_u</val> <val>enriched_u</val> <val>enriched_u</val> </update_incommods>"
      "  <recipe_update_in> <val>water</val> <val>water</val> <val>water</val> </recipe_update_in>"
      "  <recipe_update_out> <val>lwr_spent</val> <val>water</val> <val>lwr_spent</val> </recipe_update_out>";
 
