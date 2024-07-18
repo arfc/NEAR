@@ -219,6 +219,23 @@ void Ever::Tick() {
   // }
 
   // update recipes (for EVER)
+  // int lifetime = 5;
+  // for (int i = 0; i < recipe_update_times.size(); i++)
+  // {
+  //   int change_t = recipe_update_times[i];
+  //   int change_out = recipe_update_times[i] + lifetime;
+
+  //   if (t == change_t)
+  //   {
+  //     fuel_incommods[0] = update_incommods[i];
+  //     fuel_inrecipes[0] = recipe_update_in[i];
+  //     break;
+  //   }
+  // }
+  // if (t == change_out) {
+  //     fuel_outrecipes[0] = recipe_update_out[i];
+  //     fuel_outcommods[0] = update_outcommods[i];
+  //   }
   for (int i = 0; i < recipe_update_times.size(); i++) {
     int change_t = recipe_update_times[i];
     if (t == change_t) {
@@ -339,6 +356,9 @@ std::set<cyclus::BidPortfolio<Material>::Ptr> Ever::GetMatlBids(
   if (uniq_outcommods_.empty()) {
     for (int i = 0; i < fuel_outcommods.size(); i++) {
       uniq_outcommods_.insert(fuel_outcommods[i]);
+    }
+    for (int i = 0; i < update_outcommods.size(); i++) {
+        uniq_outcommods_.insert(update_outcommods[i]);
     }
   }
 

@@ -1,7 +1,7 @@
 <simulation xmlns:xi="http://www.w3.org/2001/XInclude">
   <control>
     <decay>lazy</decay>
-    <duration>840</duration>
+    <duration>20</duration>
     <startmonth>1</startmonth>
     <startyear>2020</startyear>
   </control>
@@ -96,7 +96,7 @@
 
   <facility>
     <name>EVER_Update_Reactor</name>
-    <lifetime>420</lifetime>
+    <lifetime>18</lifetime>
     <config>
       <Ever>
         <fuel_incommods>
@@ -111,12 +111,12 @@
         <fuel_outrecipes>
           <val>used_haleu</val>
         </fuel_outrecipes>
-        <recipe_update_times><val>200</val></recipe_update_times>
+        <recipe_update_times><val>5</val></recipe_update_times>
         <update_incommods><val>fresh_uox</val></update_incommods>
         <recipe_update_in><val>fresh_uox</val></recipe_update_in>
         <update_outcommods><val>used_uox</val></update_outcommods>
         <recipe_update_out><val>used_uox</val></recipe_update_out>
-        <cycle_time>18</cycle_time>
+        <cycle_time>2</cycle_time>
         <refuel_time>1</refuel_time>
         <assem_size>33000</assem_size> <!-- in kg -->
         <n_assem_core>3</n_assem_core>
@@ -178,7 +178,7 @@
               <val>EVER_Update_Reactor</val>
           </prototypes>
           <build_times>
-              <val>10</val>
+              <val>2</val>
           </build_times>
           <n_build>
               <val>1</val>
