@@ -44,18 +44,20 @@
 #           github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
-name: Changelog CI
+name: Release Changelog Builder
+  uses: mikepenz/release-changelog-builder-action@v4.2.2
 
-on:
-  pull_request:
-    types: [ opened ]
+# name: Changelog CI
+# on:
+#   pull_request:
+#     types: [ opened ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+#     steps:
+#       - uses: actions/checkout@v2
 
-      - name: Run Changelog CI
-        uses: saadmk11/changelog-ci@v1.1.2
+#       - name: Run Changelog CI
+#         uses: saadmk11/changelog-ci@v1.1.2
