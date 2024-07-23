@@ -44,7 +44,7 @@
 #           github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
-name: Release Changelog Builder
+- name: Release Changelog Builder
   uses: mikepenz/release-changelog-builder-action@v4.2.2
 
 # name: Changelog CI
