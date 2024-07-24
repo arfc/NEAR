@@ -31,13 +31,13 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const comment = core.getInput('comment');
-            const { data: pullRequest } = await github.rest.pulls.list({
+            const response = await github.rest.pulls.list({
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
-              head: `${github.context.repo.owner}:${github.context.ref}`,
+              head: `${github.context.repo.owner}:${github.event.pull_request.head.ref}`,
             });
-            const prNumber = pullRequest[0].number;
-            github.rest.issues.createComment({
+            const prNumber = response.data[0].number;
+            await github.rest.issues.createComment({
               issue_number: prNumber,
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
