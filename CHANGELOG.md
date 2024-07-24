@@ -12,7 +12,7 @@ Includes New Features, Enhancements, and Bug Fixes.
 
 ### Documentation
 
-* Changelog initialization (#26, #39, #40, #46, #47, #48, #50, #51, #52)
+* Changelog initialization (#26, #39, #40, #46, #47, #48, #50, #51, #52, #54)
 * .gitignore (#21, #34, #38)
 * Repo readme (#22)
 * Abstract (#12)
