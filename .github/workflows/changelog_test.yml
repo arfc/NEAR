@@ -31,7 +31,7 @@ jobs:
           script: |
             const comment = core.getInput('comment');
             github.issues.createComment({
-              issue_number: github.context.issue.number,
+              issue_number: github.context.payload.pull_request.number,
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
               body: comment
