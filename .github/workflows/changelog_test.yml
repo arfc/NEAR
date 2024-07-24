@@ -40,7 +40,7 @@ jobs:
       - name: Check for CHANGELOG.md update
         id: changelog-check
         run: |
-          if ! grep -q "CHANGELOG.md" <<< "${{ github.event.pull_request.changed_files }}"; then
+          if ! grep -q "CHANGELOG.md" <<< "${{ steps.changed-markdown-files.outputs.all_changed_files }}"; then
             echo "Each PR must include an update to the CHANGELOG.md file."
             echo "::set-output name=comment::Each PR must include an update to the CHANGELOG.md file."
             echo "::set-output name=changelog-updated::false"
