@@ -29,8 +29,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const core = require('@actions/core');
-            const github = require('@actions/github');
             const comment = core.getInput('comment');
             github.issues.createComment({
               issue_number: github.context.issue.number,
