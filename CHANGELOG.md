@@ -16,6 +16,7 @@ Includes New Features, Enhancements, and Bug Fixes.
 * .gitignore (#21, #34, #38)
 * Repo readme (#22)
 * Abstract (#12)
+* Contributing document (#55)
 
 ### Example
 Includes analysis notebooks.
