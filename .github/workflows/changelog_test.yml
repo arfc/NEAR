@@ -19,24 +19,25 @@ jobs:
         run: |
           if ! grep -q "CHANGELOG.md" <<< "${{ github.event.pull_request.changed_files }}"; then
             echo "Each PR must include an update to the CHANGELOG.md file."
-            # Add a comment to the PR
             echo "::set-output name=comment::Each PR must include an update to the CHANGELOG.md file."
+          else
+            echo "CHANGELOG.md update found."
           fi
 
       - name: Comment on PR
-        uses: actions/github-script@v4
         if: steps.changelog-check.outputs.comment
+        uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const comment = core.getInput('comment');
-            const { data: pullRequest } = await github.repos.listPullRequestsAssociatedWithCommit({
+            const { data: pullRequest } = await github.rest.pulls.list({
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
-              commit_sha: github.context.sha,
+              head: `${github.context.repo.owner}:${github.context.ref}`,
             });
             const prNumber = pullRequest[0].number;
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: prNumber,
               owner: github.context.repo.owner,
               repo: github.context.repo.repo,
