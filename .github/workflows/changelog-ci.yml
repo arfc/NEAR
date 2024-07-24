@@ -1,6 +1,8 @@
 name: 'Changelog CI'
-on:
-  push:
+on: [ push ]
+permissions:
+  contents: read-all
+  pull-requests: read-all
 
 jobs:
   release:
