@@ -28,28 +28,28 @@
 //     ]
 //   }
 
-- name: Build Changelog
-  uses: mikepenz/release-changelog-builder-action@v4
-  with:
-    configurationJson: |
-      {
-        "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
-        "categories": [
-          {
-            "title": "Bug Fixes",
-            "labels": ["Bug Fix"]
-          },
-          {
-            "title": "Code Enhancements",
-            "labels": ["Enhancement"]
-          },
-          {
-            "title": "New Features",
-            "labels": ["New Feature"]
-          },
-          {
-            "title": "Documentation Updates",
-            "labels": ["Documentation", "Example"]
-          }
-        ]
-      }
+// - name: Build Changelog
+//   uses: mikepenz/release-changelog-builder-action@v4
+//   with:
+//     configurationJson: |
+//       {
+//         "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+//         "categories": [
+//           {
+//             "title": "Bug Fixes",
+//             "labels": ["Bug Fix"]
+//           },
+//           {
+//             "title": "Code Enhancements",
+//             "labels": ["Enhancement"]
+//           },
+//           {
+//             "title": "New Features",
+//             "labels": ["New Feature"]
+//           },
+//           {
+//             "title": "Documentation Updates",
+//             "labels": ["Documentation", "Example"]
+//           }
+//         ]
+//       }
