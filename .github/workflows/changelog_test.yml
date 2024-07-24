@@ -5,6 +5,7 @@ on:
     types:
       - opened
       - synchronize
+      - reopened
 
 jobs:
   changelog-check:
@@ -20,26 +21,14 @@ jobs:
           if ! grep -q "CHANGELOG.md" <<< "${{ github.event.pull_request.changed_files }}"; then
             echo "Each PR must include an update to the CHANGELOG.md file."
             echo "::set-output name=comment::Each PR must include an update to the CHANGELOG.md file."
+            echo "::set-output name=changelog-updated::false"
           else
             echo "CHANGELOG.md update found."
+            echo "::set-output name=changelog-updated::true"
           fi
 
-      - name: Comment on PR
-        if: steps.changelog-check.outputs.comment
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const comment = core.getInput('comment');
-            const response = await github.rest.pulls.list({
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
-              head: `${github.context.repo.owner}:${github.event.pull_request.head.ref}`,
-            });
-            const prNumber = response.data[0].number;
-            await github.rest.issues.createComment({
-              issue_number: prNumber,
-              owner: github.context.repo.owner,
-              repo: github.context.repo.repo,
-              body: comment
-            });
+      - name: Prevent PR merge if CHANGELOG.md is not updated
+        if: steps.changelog-check.outputs.changelog-updated == 'false'
+        run: |
+          echo "The CHANGELOG.md file must be updated before merging."
+          exit 1
