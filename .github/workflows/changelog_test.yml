@@ -15,6 +15,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Debug changed files
+        run: |
+          echo "Changed files:"
+          echo "${{ github.event.pull_request.changed_files }}"
+
       - name: Check for CHANGELOG.md update
         id: changelog-check
         run: |
