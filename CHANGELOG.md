@@ -21,7 +21,7 @@ Includes New Features, Enhancements, and Bug Fixes.
 ### Example
 Includes analysis notebooks.
 
-* Analysis scripts (#31, #37)
+* Analysis scripts (#31, #37, #56)
 * Recipe update analysis (#41, #37)
 * Baseline recycle scenario analysis (#20, #37)
 * Preference analysis (#6, #15, #37)

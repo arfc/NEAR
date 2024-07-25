@@ -11,8 +11,13 @@ def used_fuel_transactions(transactions, fuels):
         The types of fuel traded.
     """
     for fuel in fuels:
-        transactions[f'used_{fuel}_total'] = transactions.loc[
-            transactions['Commodity'] == f'used_{fuel}']['Quantity'].cumsum()
+        transactions[f'used_{fuel}'] = \
+            transactions.loc[
+                transactions['Commodity'] == f'used_{fuel}']['Quantity']
+        transactions[f'used_{fuel}_total'] = \
+            transactions[f'used_{fuel}'].fillna(0)
+        transactions[f'used_{fuel}_total'] = \
+            transactions[f'used_{fuel}_total'].cumsum()
 
     return transactions
 
@@ -29,8 +34,12 @@ def fresh_fuel_transactions(transactions, fuels):
         The types of fuel traded.
     """
     for fuel in fuels:
-        transactions[f'fresh_{fuel}_total'] = transactions.loc[
-            transactions['Commodity'] == f'fresh_{fuel}']['Quantity'].cumsum()
+        transactions[f'fresh_{fuel}'] = transactions.loc[
+            transactions['Commodity'] == f'fresh_{fuel}']['Quantity']
+        transactions[f'fresh_{fuel}_total'] = \
+            transactions[f'fresh_{fuel}'].fillna(0)
+        transactions[f'fresh_{fuel}_total'] = \
+            transactions[f'fresh_{fuel}_total'].cumsum()
 
     return transactions
 
