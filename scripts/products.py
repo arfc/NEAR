@@ -1,8 +1,10 @@
 import pandas as pd
 
+
 def energy_supply(cursor):
     """
-    This function will pull the energy supply data from the database and return it as a pandas dataframe.
+    This function will pull the energy supply data from the database
+    and return it as a pandas dataframe.
 
     Parameters
     ----------
@@ -14,38 +16,44 @@ def energy_supply(cursor):
     switch_energy_supply: pd.DataFrame
         The energy supply data for the simulation.
     """
-    # now we will pull the supplied power to get the amount of power from each reactor at every time step
+    # Now we will pull the supplied power to get the amount of
+    # power from each reactor at every time step.
     cursor.execute("SELECT * FROM TimeSeriessupplyPOWER")
     supply_rows = cursor.fetchall()
 
-    # create an empty dictionary that mirrors the format of the PowerSupply table
+    # Create an empty dictionary that mirrors the format of
+    # the PowerSupply table.
     energy_supply = {
         'id':[],
         'time':[],
         'energy':[]
     }
 
-    # now we will pull the power at each time step for each reactor
+    # Next we will pull the power at each time step for each reactor.
     for row in range(len(supply_rows)):
         energy_supply['id'].append(str(supply_rows[row][1]))
         energy_supply['time'].append(supply_rows[row][2])
         energy_supply['energy'].append(supply_rows[row][3])
 
-    # make the dictionary into a pandas DataTrame to match the type of the other data we've been working with
+    # Make the dictionary into a pandas DataTrame to match the type of the
+    # other data we've been working with.
     energy_supply_df = pd.DataFrame.from_dict(energy_supply)
 
-    # we will turn the ids into columns of energy and make the index time
-    switch_energy_supply = energy_supply_df.pivot_table(index='time', columns='id', values='energy', fill_value=0)
+    # We will turn the ids into columns of energy and make the index time
+    switch_energy_supply = energy_supply_df.pivot_table(
+        index='time', columns='id', values='energy', fill_value=0)
 
-    # now we will add a total_energy column
-    switch_energy_supply['total_energy'] = switch_energy_supply.iloc[:,0:].sum(axis=1)
+    # Now we will add a total_energy column.
+    switch_energy_supply['total_energy'] = \
+        switch_energy_supply.iloc[:, 0:].sum(axis=1)
 
     return switch_energy_supply
 
 
 def swu_supply(cursor):
     """
-    This function will pull the swu supply data from the database and return it as a pandas DataFrame.
+    This function will pull the swu supply data from the database
+    and return it as a pandas DataFrame.
 
     Parameters
     ----------
@@ -65,9 +73,9 @@ def swu_supply(cursor):
     # Create an empty dictionary that mirrors the format of the
     # TimeSeriesEnrichmentSWU table.
     swu_supply = {
-        'id':[],
-        'Time':[],
-        'SWU':[]
+        'id': [],
+        'Time': [],
+        'SWU': []
     }
 
     # Next we will pull the swu at each time step for each facility.
@@ -81,9 +89,11 @@ def swu_supply(cursor):
     swu_supply_df = pd.DataFrame.from_dict(swu_supply)
 
     # We will turn the ids into columns of energy and make the index time.
-    switch_swu_supply = swu_supply_df.pivot_table(index='Time', columns='id', values='SWU', fill_value=0)
+    switch_swu_supply = swu_supply_df.pivot_table(
+        index='Time', columns='id', values='SWU', fill_value=0)
 
     # Now we will add a total_energy column.
-    switch_swu_supply['total_swu'] = switch_swu_supply.iloc[:,0:].sum(axis=1)
+    switch_swu_supply['total_swu'] = \
+        switch_swu_supply.iloc[:, 0:].sum(axis=1)
 
     return switch_swu_supply
