@@ -14,15 +14,15 @@ Includes New Features, Enhancements, and Bug Fixes.
 
 * Changelog initialization (#26, #39, #40, #46, #47, #48, #50, #51, #52, #54)
 * .gitignore (#21, #34, #38)
-* Repo readme (#22)
+* Repo readme (#22, #57)
 * Abstract (#12)
 * Contributing document (#55)
 
 ### Example
 Includes analysis notebooks.
 
-* Analysis scripts (#31, #37, #56)
-* Recipe update analysis (#41, #37)
-* Baseline recycle scenario analysis (#20, #37)
-* Preference analysis (#6, #15, #37)
-* Baseline cycamore example (#2, #37)
+* Analysis scripts (#31, #37, #56, #57)
+* Recipe update analysis (#41, #37, #57)
+* Baseline recycle scenario analysis (#20, #37, #57)
+* Preference analysis (#6, #15, #37, #57)
+* Baseline cycamore example (#2, #37, #57)
