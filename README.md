@@ -6,6 +6,22 @@ NEAR (Non-Equilibrium Archetypes of Reactors): Houses cyclus archetypes for non-
 > [!Note]
 > Cite this work as (pending)...
 
+## Installing
+Each of the archetypes in this repository can be installed using `install.sh`.
+For the script to work, you must install Cycamore from source, as the install
+script essentially copies the source files over to your Cycamore directory and
+installs them from there.
+
+Then, from the top-level of this repository, run
+```
+bash install.sh
+```
+Then you will be prompted to give the relative path from NEAR to Cycamore, and
+asked which archetype you wish to install.
+
+You can find installation instructions for  Cyclus, Cycamore, and Cymetric
+online at [https://fuelcycle.org/user/install.html](https://fuelcycle.org/user/install.html).
+
 ## ./Baseline/
 Contains a single deployment of a traditional Cycamore reactor archetype along with the corresponding analysis notebook and output file.
 
