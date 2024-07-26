@@ -156,8 +156,8 @@ def fuel_sent(evaler, fuels, senders):
                 sent[f'{fuels[fuel]}_{sender}'] = sent_next['Mass']
 
         # create the total fuel sent columns
-            for fuel in fuels:
-                sent[f'{fuel}_{sender}_total'] = \
-                    sent[f'{fuel}_{sender}'].cumsum()
+        for fuel in fuels:
+            sent[f'{fuel}_{sender}_total'] = \
+                sent[f'{fuel}_{sender}'].cumsum()
 
     return sent
