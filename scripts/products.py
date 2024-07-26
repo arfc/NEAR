@@ -24,9 +24,9 @@ def energy_supply(cursor):
     # Create an empty dictionary that mirrors the format of
     # the PowerSupply table.
     energy_supply = {
-        'id':[],
-        'time':[],
-        'energy':[]
+        'id': [],
+        'time': [],
+        'energy': []
     }
 
     # Next we will pull the power at each time step for each reactor.

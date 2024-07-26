@@ -70,6 +70,7 @@ def total_used_fr_fuel(transactions, fuels):
 
     return transactions
 
+
 def fuel_received(evaler, fuels, receivers):
     """
     Creates a DataFrame of the total fuel received by each receiver.

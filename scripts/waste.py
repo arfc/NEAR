@@ -130,7 +130,10 @@ def isotope_database(evaler, receivers, isotopes, commodities):
     """
 
     isotope_db = transactions_nuc_built_in(
-        evaler=evaler, receivers=receivers, commodities=commodities, nucs=isotopes)
+        evaler=evaler,
+        receivers=receivers,
+        commodities=commodities,
+        nucs=isotopes)
 
     # Create the dataframe and populate the columns for each
     # isotope with zeros.
