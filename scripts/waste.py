@@ -129,9 +129,11 @@ def isotope_database(evaler, receivers, isotopes, commodities):
         each time step.
     """
 
-    isotope_db = transactions_nuc_built_in(evaler=evaler,receivers=receivers, commodities=commodities, nucs=isotopes)
+    isotope_db = transactions_nuc_built_in(
+        evaler=evaler, receivers=receivers, commodities=commodities, nucs=isotopes)
 
-    # Create the dataframe and populate the columns for each isotope with zeros.
+    # Create the dataframe and populate the columns for each
+    # isotope with zeros.
     isotope_df = evaler.eval('TimeList')
     for nucid in isotopes:
         isotope_df[nucid] = 0
@@ -140,10 +142,10 @@ def isotope_database(evaler, receivers, isotopes, commodities):
     # Track the mass of each isotope stored at each time.
     for transaction in range(len(isotope_db)):
         for nucid in isotopes:
-            if isotope_db.loc[transaction,'NucId'] == int(nucid):
-                mass = isotope_db.loc[transaction,'Mass']
-                time_step = isotope_db.loc[transaction,'Time']
-                isotope_df.loc[str(time_step),str(nucid)] = mass
+            if isotope_db.loc[transaction, 'NucId'] == int(nucid):
+                mass = isotope_db.loc[transaction, 'Mass']
+                time_step = isotope_db.loc[transaction, 'Time']
+                isotope_df.loc[str(time_step), str(nucid)] = mass
 
     # Add up the totals for each isotope over time.
     for nucid in isotopes:
