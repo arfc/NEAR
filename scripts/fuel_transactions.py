@@ -1,5 +1,6 @@
 from cymetric import timeseries
 
+
 def used_fuel_transactions(transactions, fuels):
     """
     Adds up all the used fuel transactions for each fuel type in a new column.
@@ -104,7 +105,9 @@ def fuel_received(evaler, fuels, receivers):
         if len(fuels) > 1:
             for fuel in range(1, len(fuels)):
                 received_next = timeseries.transactions(
-                    evaler=evaler, receivers=[f'{receiver}'], commodities=[fuels[fuel]])
+                    evaler=evaler,
+                    receivers=[f'{receiver}'],
+                    commodities=[fuels[fuel]])
 
                 received[f'{fuels[fuel]}_{receiver}'] = received_next['Mass']
 
@@ -151,7 +154,9 @@ def fuel_sent(evaler, fuels, senders):
         if len(fuels) > 1:
             for fuel in range(1, len(fuels)):
                 sent_next = timeseries.transactions(
-                    evaler=evaler, senders=[f'{sender}'], commodities=[fuels[fuel]])
+                    evaler=evaler,
+                    senders=[f'{sender}'],
+                    commodities=[fuels[fuel]])
 
                 sent[f'{fuels[fuel]}_{sender}'] = sent_next['Mass']
 
