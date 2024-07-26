@@ -109,9 +109,9 @@ def fuel_received(evaler, fuels, receivers):
                 received[f'{fuels[fuel]}_{receiver}'] = received_next['Mass']
 
         # create the total fuel received columns
-            for fuel in fuels:
-                received[f'{fuel}_{receiver}_total'] = \
-                    received[f'{fuel}_{receiver}'].cumsum()
+        for fuel in fuels:
+            received[f'{fuel}_{receiver}_total'] = \
+                received[f'{fuel}_{receiver}'].cumsum()
 
     return received
 
