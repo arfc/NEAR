@@ -7,7 +7,7 @@ Using user defined recipes, use the EVER archetype as you would the Cycamore Rea
 graph LR
 A(Define fuels) --> B(Input fuel list)
 B --> C(List change times)
-C -- optional --> D(List new recipes)
+C -- optional --> D(List preferences)
 C --> E(Run)
 D --> E
 ```
