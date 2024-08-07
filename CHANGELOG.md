@@ -17,12 +17,14 @@ Includes New Features, Enhancements, and Bug Fixes.
 * Repo readme (#22, #57, #60)
 * Abstract (#12)
 * Contributing document (#55)
+* Baseline readme (#62)
+* Scripts readme (#62)
 
 ### Example
 Includes analysis notebooks.
 
 * Analysis scripts (#31, #37, #56, #57)
-* Recipe update analysis (#41, #37, #57)
+* Recipe update analysis (#41, #37, #57, #62)
 * Baseline recycle scenario analysis (#20, #37, #57)
-* Preference analysis (#6, #15, #37, #57)
-* Baseline cycamore example (#2, #37, #57)
+* Preference analysis (#6, #15, #37, #57, #62)
+* Baseline cycamore example (#2, #37, #57, #62)
