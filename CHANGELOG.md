@@ -14,11 +14,12 @@ Includes New Features, Enhancements, and Bug Fixes.
 
 * Changelog initialization (#26, #39, #40, #46, #47, #48, #50, #51, #52, #54)
 * .gitignore (#21, #34, #38)
-* Repo readme (#22, #57, #60)
+* Repo readme (#22, #57, #60, #64)
 * Abstract (#12)
 * Contributing document (#55)
 * Baseline readme (#62)
 * Scripts readme (#62)
+* Repo License (#64)
 
 ### Example
 Includes analysis notebooks.
