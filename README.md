@@ -25,11 +25,14 @@ online at [https://fuelcycle.org/user/install.html](https://fuelcycle.org/user/i
 ## ./Baseline/
 Contains a single deployment of a traditional Cycamore reactor archetype along with the corresponding analysis notebook and output file.
 
-## ./EVER/
-Houses the Enrichment Versatile non-Equilibrium Reactor (EVER), a generic Cyclus archetype that has the capability to update the recipe of fuel in a reactor.
-
 ## ./CLOVER/ (in progress)
 Houses the Core LOading Versatile non-Equilibrium Reactor (CLOVER), a generic Cyclus archetype that has the capability to update the loading pattern of a reactor core.
+
+## ./DPR/
+Houses the Dynamic Power Reactor (DPR) archetype. DPR is based on the Cyclus v.1.6 Cycamore reactor archetype, but it can adjust the power output of the reactor over time.
+
+## ./EVER/
+Houses the Enrichment Versatile non-Equilibrium Reactor (EVER), a generic Cyclus archetype that has the capability to update the recipe of fuel in a reactor.
 
 ## ./writing/
 This folder contains the writing on this project, and is governed by the license therein.

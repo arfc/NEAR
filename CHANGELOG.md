@@ -9,6 +9,7 @@ Includes New Features, Enhancements, and Bug Fixes.
 * EVER low fidelity recipe update (#7, #17, #33)
 * Install script (#23, #24)
 * Start CLOVER (#8, #16)
+* Create DPR (#65)
 
 ### Documentation
 
