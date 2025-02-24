@@ -1,6 +1,9 @@
 # Dynamic Power Reactor (DPR)
 DPR is a Cyclus reactor archetype based on Cycamore's Reactor, except that it has the ability to update the power output over time.
 
+## Cite this work
+Pending...
+
 ## power_percent_list
 Outside of refueling, the power output of the reactor can be modified by a percentage in the Tock phase of each time step. This feature is optional, and will default to 100% of the power_cap variable the user identifies. At each time step, the reactor will progress through the percentages; as such, there must be a percentage for each time step (if the length of the power_percent_list is shorter than the number of time steps, the reactor will default to 100%).
 
