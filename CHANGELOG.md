@@ -10,6 +10,7 @@ Includes New Features, Enhancements, and Bug Fixes.
 * Install script (#23, #24)
 * Start CLOVER (#8, #16)
 * Create DPR (#65)
+* Create TOD Reactor (#66)
 
 ### Documentation
 
