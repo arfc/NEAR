@@ -34,6 +34,9 @@ Houses the Dynamic Power Reactor (DPR) archetype. DPR is based on the Cyclus v.1
 ## ./EVER/
 Houses the Enrichment Versatile non-Equilibrium Reactor (EVER), a generic Cyclus archetype that has the capability to update the recipe of fuel in a reactor.
 
+## ./TOD/
+Houses the Trading On-Demand (TOD) Reactor archetype. TOD is based on the Cyclus v.1.6 Cycamore reactor archetype, but it skips the Tick and Tock parts of a time step if it is not ready to accept more fuel.
+
 ## ./writing/
 This folder contains the writing on this project, and is governed by the license therein.
 
