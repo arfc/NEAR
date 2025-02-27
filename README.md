@@ -26,16 +26,16 @@ online at [https://fuelcycle.org/user/install.html](https://fuelcycle.org/user/i
 Contains a single deployment of a traditional Cycamore reactor archetype along with the corresponding analysis notebook and output file.
 
 ## ./CLOVER/ (in progress)
-Houses the Core LOading Versatile non-Equilibrium Reactor (CLOVER), a generic Cyclus archetype that has the capability to update the loading pattern of a reactor core.
+Houses the Core LOading Versatile non-Equilibrium Reactor (CLOVER, pronounced *clover*), a generic Cyclus archetype that has the capability to update the loading pattern of a reactor core.
 
 ## ./DPR/
-Houses the Dynamic Power Reactor (DPR) archetype. DPR is based on the Cyclus v.1.6 Cycamore reactor archetype, but it can adjust the power output of the reactor over time.
+Houses the Dynamic Power Reactor (DPR, pronounced *dipper*) archetype. DPR is based on the Cyclus v.1.6 Cycamore reactor archetype, but it can adjust the power output of the reactor over time.
 
 ## ./EVER/
-Houses the Enrichment Versatile non-Equilibrium Reactor (EVER), a generic Cyclus archetype that has the capability to update the recipe of fuel in a reactor.
+Houses the Enrichment Versatile non-Equilibrium Reactor (EVER, pronounced *ever*), a generic Cyclus archetype that has the capability to update the recipe of fuel in a reactor.
 
 ## ./TOD/
-Houses the Trading On-Demand (TOD) Reactor archetype. TOD is based on the Cyclus v.1.6 Cycamore reactor archetype, but it skips the Tick and Tock parts of a time step if it is not ready to accept more fuel.
+Houses the Trading On-Demand (TOD, pronounced *Tod*) Reactor archetype. TOD is based on the Cyclus v.1.6 Cycamore reactor archetype, but it skips the Tick and Tock parts of a time step if it is not ready to accept more fuel.
 
 ## ./writing/
 This folder contains the writing on this project, and is governed by the license therein.
