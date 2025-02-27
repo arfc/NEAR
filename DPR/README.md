@@ -1,5 +1,5 @@
 # Dynamic Power Reactor (DPR)
-DPR is a Cyclus reactor archetype based on Cycamore's Reactor, except that it has the ability to update the power output over time.
+DPR (pronounced *dipper*) is a Cyclus reactor archetype based on Cycamore's Reactor, except that it has the ability to update the power output over time.
 
 ## Cite this work
 Pending...
@@ -29,3 +29,5 @@ If the simulation was extended to 11 time steps with out the list changing, the 
 > we recommend that you ensure your outages align with when the reactor goes
 > into outage if you are modeling a historical example.
 
+## Example
+In the example folder we provide the input files and scripts used to generate the data.
